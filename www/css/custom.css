@@ -1,0 +1,177 @@
+/* 
+    Document   : custom
+    Created on : Aug 9, 2013, 5:53:17 AM
+    Author     : bfb
+    Description:
+        Custom edits
+*/
+/*Header*/
+.custom-header {
+        padding: 5px;
+        background: #364049;
+        height: 90px;
+}
+/* Header logo_image */
+.logo_container {
+        max-width: 410px;
+        margin: 25px auto;
+}
+.logo_image {
+        width:100%;
+}
+.home_text {
+    width: 280px;
+    margin: auto;
+    padding: 40px 20px 20px 20px;
+}
+.home_text h3 {
+        width: 100%;
+        margin: auto;
+        padding: 0px 0 0 0;
+}
+@media all and (max-width:400px) {
+    .home_text {
+/*    width: 100%;*/
+    padding-top: 25px;
+    padding-bottom: 0px;
+}
+    .home_text h3 {
+        width: 100%;
+        padding: 0;
+        margin: auto;
+}
+.ui-header .ui-title {
+        margin-left: 60px;
+}
+.ui-listview>li p {
+    display: none;
+}
+.ui-listview>.ui-li-has-thumb>.ui-btn, .ui-listview>.ui-li-static.ui-li-has-thumb {
+    min-height: 2.3em;
+}
+}
+/*Header Font Size*/
+/*#readymix .ui-header {
+  height: 38px;   
+}*/
+/*#readymix .ui-header h1 {
+  font-size: 14px;
+}*/
+.ui-header .ui-title {
+        margin-right: auto;
+        margin-left: auto;
+}
+
+/*Content*/
+#home-content {
+        max-width: 400px;
+        margin: 0 auto;
+}
+
+
+/*Buttons*/
+.ui-btn {
+        max-width: 500px;
+}
+
+#btn-home {
+        max-width: 200px;
+        margin: auto;
+        margin-top: 30px;
+}
+
+.ui-li-thumb, .ui-li-icon {
+/*    left: 1px;*/
+        padding: 5px;
+        padding-left: 10px;
+        max-height: 70px; 
+        max-width: 70px; 
+        position: absolute;
+        top: 0;
+}
+.shape_container {
+        max-width: 240px;
+        margin: 5px auto;
+}
+.shape_image {
+        width:100%;
+}
+/*Listview*/
+/*#readymix, .ui-li {
+        height: 65px;
+}
+#readymix, ui-li h1 {
+        margin-top: 1px;
+}*/
+
+#home-steps ol li {
+        margin-bottom: 10px;
+}
+
+.ui-shadow {
+        box-shadow: none;
+}
+.ui-li-has-thumb .ui-btn-inner a.ui-link-inherit,.ui-li-static.ui-li-has-thumb {
+        padding-left: 65px;
+}
+#home-steps {
+        max-width: 250px;
+        margin: 0 auto;
+}
+
+/*Calculator Results*/
+#blockcalculator_result {
+	font-size:30px;
+	text-align:center;
+        border-bottom: 1px dotted;
+        margin-top: 0px;
+}
+
+#mortarcalculator_result {
+	font-size:30px;
+	text-align:center;
+        border-bottom: 1px dotted;
+        margin-top: 0px;
+}
+
+#sandcalculator_result {
+	font-size:30px;
+	text-align:center;
+        border-bottom: 1px dotted;
+        margin-top: 0px;
+}
+
+#reinfcalculator_result {
+	font-size:30px;
+	text-align:center;
+        border-bottom: 1px dotted;
+        margin-top: 0px;
+}
+
+#aggcalculator_result {
+	font-size:30px;
+	text-align:center;
+}
+
+#evapcalculator_result {
+	font-size:26px;
+	text-align:center;
+}
+#evapretcalculator_result {
+	font-size:26px;
+	text-align:center;
+}
+/*#square_main_content h4, #slope_main_content h4, #circle_main_content h4, 
+#tube_main_content h4, #triangle_main_content h4 {
+        color: #B40404;
+        font-size: 18px;
+}*/
+.pageresults {
+        color: #B40404;
+        font-size: 18px;
+}
+@media all and (max-width:400px) {
+.ui-header .ui-title {
+        margin-left: 60px;
+}
+}

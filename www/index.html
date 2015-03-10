@@ -1,0 +1,1051 @@
+<!DOCTYPE html> 
+<!--<html manifest='manifest.appcache'>-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes" />        
+<title>Concrete Calc.</title>
+<script src="phonegap.js"></script>    
+<script src="js/libs/jquery-2.1.1.min.js"></script>    
+<script src="js/libs/jquery.mobile-1.4.1.min.js"></script>
+<script type="text/javascript">
+var addToHomeConfig = {
+
+           animationIn: 'bubble',
+           animationOut: 'drop',
+           lifespan:10000,
+           expire:2,
+           touchIcon:true,
+           message:'Click the Button Below to Add an Icon to Your Phone.'
+};
+</script>    
+<link rel="stylesheet" href="css/add2home.css" /> 
+<link rel="stylesheet" href="themes/advanced.css" />
+<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.2.min.css" />
+<link rel="stylesheet" href="css/custom.css">
+<link rel="apple-touch-icon" sizes="57x57" href="pics/apple-touch-icon-precomposed.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="pics/apple-touch-icon-72x72-precomposed.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="pics/apple-touch-icon-114x114-precomposed.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="pics/apple-touch-icon-144x144-precomposed.png" />
+<link rel="shortcut icon" sizes="196x196" href="pics/icon_android.png">
+<script type="application/javascript" src="add2home.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48621822-1', 'myconcreteapp.com');
+  ga('send', 'pageview');
+</script>
+</head> 
+
+<body> 
+
+<!-- Start of home page: #home -->
+<div data-role="page" id="home" data-theme="d">
+	<div data-role="header" class="custom-header">
+            <div class="logo_container">
+            <img src="pics/logo_image.png" class="logo_image"/>
+            </div>
+        </div>
+<!-- /header -->
+
+    <div class="home_text">
+       <h3>Choose your calculator below</h3>
+    </div>
+	
+    <div data-role="content">	
+            
+                <div align="center">
+                    <p><a href="#readymix" data-role="button" data-transition="slide" data-theme="c">Ready Mix</a></p>	
+                    <p><a href="#blockform" data-role="button" data-transition="slide" data-theme="c">Block</a></p>
+                    <p><a href="#agg" data-role="button" data-transition="slide" data-theme="c">Sand & Aggregate</a></p>
+                    <p><a href="#evap" data-role="button" data-transition="slide" data-theme="c">Rate of Evaporation</a></p>
+                </div>
+          </div><!-- /content -->
+                       
+	<div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div><!-- /End home page -->
+
+<!-- Start of ready mix choose shape page: #readymix -->
+<div data-role="page" id="readymix" data-theme="a" >
+
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Enter Dimensions</h1>
+	</div><!-- /header -->
+        <div align="center">
+	   <ul data-role="listview" data-inset="true" data-theme="a">
+                <li><a href="#readymixsquareform" data-transition="slide">
+                    <img src="pics/square.png" alt="square">
+                    <h2>Square/Rectangle</h2>
+                    <p>For footings, slabs and flooring</p></a>
+                </li>
+                <li><a href="#readymixslopeform" data-transition="slide">
+                    <img src="pics/slope.png" alt="slope">
+                    <h2>Slope</h2>
+                    <p>For monolithic and thickened slabs</p></a>
+                </li>
+                <li><a href="#readymixcircleform" data-transition="slide">
+                    <img src="pics/circle.png" alt="circle">
+                    <h2>Circle</h2>
+                    <p>For circular slabs and cylinders</p></a>
+                </li>
+                <li><a href="#readymixtubeform" data-transition="slide">
+                    <img src="pics/tube.png" alt="tube">
+                    <h2>Tube</h2>
+                    <p>For circular footings</p></a>
+                </li>
+                <li><a href="#readymixtriangleform" data-transition="slide">
+                    <img src="pics/triangle.png" alt="triangle">
+                    <h2>Triangle</h2>
+                    <p>For 90 degree triangles</p></a>
+                </li>
+                <li><a href="#call" data-transition="slide">
+                    <img src="pics/other.png" alt="other">
+                    <h2>Other shapes?</h2>
+                    <p>Contact our sales team for assistance.</p></a>
+                </li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div><!-- /End ready mix choose shape page -->
+
+<!-- Start of readymix square form: #readymixsquareform -->
+<div data-role="page" id="readymixsquareform" data-theme="c" >
+
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Enter Dimensions</h1>
+	</div><!-- /header -->
+        <div align="center">
+            <div id="square_main_content">
+                <h3><strong>Square / Rectangle</strong></h3>
+                <div class="shape_container">
+            <img alt="small_square" src="pics/square_large.png" class="shape_image" />
+            </div>
+                <h4><span id="calcsquare_result" class="pageresults"></span></h4>
+                <form id="squareCalc" name="frmCalc" action="#" method="post">
+                <table>
+                  <tr>
+                    <td>Length:</td>
+                    <td><input id="squareHeight" name="squareHeight" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                    <td><select id="squareHeightVal" name="squareHeightVal" data-mini="true">
+                        <option value="Inches">Inches</option>
+                        <option selected="selected" value="Feet">Feet</option>
+                        <option value="Yards">Yards</option>
+                        <option value="Miles">Miles</option>
+                      </select></td>
+                  </tr>
+                  <tr>
+                    <td>Width:</td>
+                    <td><input id="squareWidth" name="squareWidth" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                    <td><select id="squareWidthVal" name="squareWidthVal" data-mini="true">
+                        <option value="Inches">Inches</option>
+                        <option selected="selected"  value="Feet">Feet</option>
+                        <option value="Yards">Yards</option>
+                        <option value="Miles">Miles</option>
+                      </select></td>
+                  </tr>
+                  <tr>
+                    <td>Depth:</td>
+                    <td><input id="squareDepth" name="squareDepth" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                    <td><select id="squareDepthVal" name="squareDepthVal" data-mini="true">
+                        <option selected="selected" value="Inches">Inches</option>
+                        <option value="Feet">Feet</option>
+                        <option value="Yards">Yards</option>
+                        <option value="Miles">Miles</option>
+                      </select></td>
+                  </tr>
+                </table>
+            <a id="calculate_square" onclick="calculate_square();" data-role="button" data-inline="true" title="Click to calculate Volume" href="#">Calculate Volume</a>
+        </form>
+      </div>
+    </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div><!-- /End ready mix square form page -->
+
+<!-- Start of readymix slope form: #readymixslopeform -->
+<div data-role="page" id="readymixslopeform" data-theme="c" >
+
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Enter Dimensions</h1>
+	</div><!-- /header -->
+        <div align="center">
+            <h3><strong>Slope</strong></h3>
+            <img alt="large_slope" src="pics/slope_large.png"/> 
+            <h4><span id="calcslope_result" class="pageresults"></span></h4>       
+            <form id="slopeCalc" name="frmCalc" action="#" method="post">
+              <table>
+                <tr>
+                  <td>Length:</td>
+                  <td><input id="slopeHeight" name="slopeHeight" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="slopeHeightVal" name="slopeHeightVal" data-mini="true">
+                      <option value="Inches">Inches</option>
+                      <option selected="selected"  value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Width:</td>
+                  <td><input id="slopeWidth" name="slopeWidth" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="slopeWidthVal" name="slopeWidthVal" data-mini="true">
+                      <option value="Inches">Inches</option>
+                      <option selected="selected" value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Depth A:</td>
+                  <td><input id="slopeDepth" name="slopeDepth" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="slopeDepthVal" name="slopeDepthVal" data-mini="true">
+                      <option selected="selected" value="Inches">Inches</option>
+                      <option value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Depth B:</td>
+                  <td><input id="slopeDense" name="slopeDense" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select name="slopeDenseVal" id="slopeDenseVal" data-mini="true">
+                      <option selected="selected" value="Inches">Inches</option>
+                      <option value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+              </table>
+              <a id="calculate_slope" onclick="calculate_slope();" data-role="button" data-inline="true" title="Click to calculate Volume" href="#">Calculate Volume</a>
+            </form>
+       </div>   
+     <div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div><!-- /End ready mix slope form page -->       
+
+<!-- Start of readymix circle form: #readymixcircleform -->
+<div data-role="page" id="readymixcircleform" data-theme="c" >
+
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Enter Dimensions</h1>
+	</div><!-- /header -->
+        <div align="center">
+            <h3><strong>Circle</strong></h3>
+            <img alt="large_circle" src="pics/circle_large.png" /> 
+            <h4><span id="calccircle_result" class="pageresults"></span></h4>
+            <form id="circleCalc" name="frmCalc" action="#" method="post">
+              <table>
+                <tr>
+                  <td>Radius:</td>
+                  <td><input id="circleHeight" name="circleHeight" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="circleHeightVal" name="circleHeightVal" data-mini="true">
+                      <option value="Inches">Inches</option>
+                      <option selected="selected" value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Depth:</td>
+                  <td><input id="circleWidth" name="circleWidth" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="circleWidthVal" name="circleWidthVal" data-mini="true">
+                      <option selected="selected" value="Inches">Inches</option>
+                      <option value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+              </table>
+              <a id="calculate_circle" onclick="calculate_circle();" data-role="button" data-inline="true" title="Click to calculate Volume" href="#">Calculate Volume</a>
+            </form>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div><!--End of readymix circle form-->
+
+<!-- Start of readymix tube form: #readymixtubeform -->
+<div data-role="page" id="readymixtubeform" data-theme="c" >
+
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Enter Dimensions</h1>
+	</div><!-- /header -->
+        <div align="center">
+        <h3><strong>Tube</strong></h3>
+            <img alt="large_tube" src="pics/tube_large.png" /> 
+            <h4><span id="calctube_result" class="pageresults"></span></h4>      
+            <form id="tubeCalc" name="frmCalc" action="#" method="post">
+              <table>
+                <tr>
+                  <td>Outside radius:</td>
+                  <td><input id="tubeOutside" name="tubeOutside" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="tubeOutsideVal" name="tubeOutsideVal" data-mini="true">
+                      <option value="Inches">Inches</option>
+                      <option selected="selected" value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Inside radius:</td>
+                  <td><input id="tubeInside" name="tubeInside" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="tubeInsideVal" name="tubeInsideVal" data-mini="true">
+                      <option value="Inches">Inches</option>
+                      <option selected="selected" value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Depth:</td>
+                  <td><input id="tubeDepth" name="tubeDepth" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="tubeDepthVal" name="tubeDepthVal" data-mini="true">
+                      <option selected="selected" value="Inches">Inches</option>
+                      <option value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+              </table>
+              <a id="calculate_tube" onclick="calculate_tube();" data-role="button" data-inline="true" title="Click to calculate Volume" href="#">Calculate Volume</a>
+            </form>
+        </div>
+      <div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div><!--End of readymix tube form-->       
+
+<!-- Start of readymix triangle form: #readymixtriangleform -->
+<div data-role="page" id="readymixtriangleform" data-theme="c" >
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Enter Dimensions</h1>
+	</div><!-- /header -->
+        <div align="center">
+            <h3><strong>90&deg; Triangle</strong></h3>
+            <img alt="large_triangle" src="pics/triangle_large.png" /> 
+            <h4><span id="calctriangle_result" class="pageresults"></span></h4>
+            <form id="triangleCalc" name="frmCalc" action="#" method="post">
+              <table>
+                <tr>
+                  <td>Length:</td>
+                  <td><input id="triangleHeight" name="triangleHeight" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="triangleHeightVal" name="triangleHeightVal" data-mini="true">
+                      <option value="Inches">Inches</option>
+                      <option selected="selected" value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Width:</td>
+                  <td><input id="triangleWidth" name="triangleWidth" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="triangleWidthVal" name="triangleWidthVal" data-mini="true">
+                      <option value="Inches">Inches</option>
+                      <option selected="selected" value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Depth:</td>
+                  <td><input id="triangleDepth" name="triangleDepth" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="triangleDepthVal" name="triangleDepthVal" data-mini="true">
+                      <option selected="selected" value="Inches">Inches</option>
+                      <option value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+              </table>
+              <a id="calculate_triangle" onclick="calculate_triangle();" data-role="button" data-inline="true" title="Click to calculate Volume" href="#">Calculate Volume</a>
+            </form>
+        </div>
+<div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div><!--End of readymix triangle form-->
+
+<!-- Start of results page: #results -->
+<div data-role="page" id="results" data-theme="c" >
+
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Results</h1>
+	</div><!-- /header -->
+            <br>
+            <h2 align="center">You will need:</h2>
+            <br>
+            <h2 id="calculator_result" class="pageresults"></h2>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div> <!--/End results page-->        
+        
+<!-- Start of block input page: #blockform -->
+<div data-role="page" id="blockform" data-theme="c" >
+
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Enter Dimensions</h1>
+	</div><!-- /header -->
+            <div align="center">
+                <h2><strong>Block Wall</strong></h2>
+<!--                <p>Includes block, sand, cement and reinforcing quantities</p>-->
+                <img alt="small_square" src="pics/cmu_large.png"/> 
+
+                <!-- Form content Starts Here -->
+                <form id="blockCalc" name="frmCalc" action="#" method="post">
+                  <table>
+                    <tr>
+                      <td>Height:</td>
+                      <td><input id="blockHeight" name="blockHeight" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                      <td><select id="blockHeightVal" name="blockHeightVal" data-mini="true">
+                          <option value="Inches">Inches</option>
+                          <option selected="selected" value="Feet">Feet</option>
+                          <option value="Yards">Yards</option>
+                          <option value="Miles">Miles</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                      <td>Length:</td>
+                      <td><input id="blockLength" name="blockLength" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                      <td><select id="blockLengthVal" name="blockLengthVal" data-mini="true">
+                          <option value="Inches">Inches</option>
+                          <option selected="selected"  value="Feet">Feet</option>
+                          <option value="Yards">Yards</option>
+                          <option value="Miles">Miles</option>
+                        </select></td>
+                    </tr></table>
+                    <table>
+                      <tr>
+                      <td>Block Size:</td>
+                      <td><select id="blockSizeVal" name="blockSizeVal" data-mini="true">
+                          <option selected="selected"  value="8">8" Block</option>
+                          <option value="12">12" Block</option>
+                        </select>
+                      </td>
+                      </tr> 
+                    <tr>
+                      <td>Reinforcing Spacing:</td>
+                      <td><select id="reinf" name="reinf" data-mini="true">
+                          <option selected="selected"  value='1.33'>16" Spacing</option>
+                          <option value='2'>24" Spacing</option>
+                        </select></td>
+                    </tr>   
+                   </table>
+                    <br>
+                    <a id="calculate_block" onclick="calculate_block();" data-role="button" data-inline="true" title="Click to calculate block qty" href="#blockresults">Calculate Block Qty</a>
+                </form>
+            </div>
+<div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div> <!--/End block input page-->
+
+<!-- Start of block results page: #blockresults -->
+<div data-role="page" id="blockresults" data-theme="c" >
+
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Block Results</h1>
+	</div><!-- /header -->
+            <h2 align="center">You will need:</h2>
+            <h2 id="blockcalculator_result"></h2>
+            <h2 id="mortarcalculator_result"></h2>
+            <h2 id="sandcalculator_result"></h2>
+            <h2 id="reinfcalculator_result"></h2>
+      
+        <div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div> <!--/End block results page-->
+
+<!-- Start of aggregate choose shape page: #agg -->
+<div data-role="page" id="agg" data-theme="c" >
+
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Choose Your Shape</h1>
+	</div><!-- /header -->
+        <div align="center">
+	   <ul data-role="listview" data-inset="true" data-theme="a">
+                <li><a href="#aggsquareform" data-transition="slide">
+                    <img src="pics/square.png" alt="square">
+                    <h2>Square/Rectangle</h2></a>
+                </li>
+                <li><a href="#aggslopeform" data-transition="slide">
+                    <img src="pics/slope.png" alt="slope">
+                    <h2>Slope</h2></a>
+                </li>
+                <li><a href="#aggcircleform" data-transition="slide">
+                    <img src="pics/circle.png" alt="circle">
+                    <h2>Circle</h2></a>
+                </li>
+                <li><a href="#aggtubeform" data-transition="slide">
+                        <img src="pics/tube.png" alt="tube">
+                    <h2>Tube</h2></a>
+                </li>
+                <li><a href="#aggtriangleform" data-transition="slide">
+                    <img src="pics/triangle.png" alt="triangle">
+                    <h2>Triangle</h2></a>
+                </li>
+                <li><a href="#call">
+                    <img src="pics/other.png" alt="other">
+                    <h2>Other shapes?</h2>
+                    <p>Contact our sales team for assistance.</p></a>
+                </li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div><!-- /End aggregate choose shape page -->
+
+<!-- Start of agg square form: #aggsquareform -->
+<div data-role="page" id="aggsquareform" data-theme="c" >
+
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Enter Dimensions</h1>
+	</div><!-- /header -->
+        <div align="center">
+                <h3><strong>Square / Rectangle</strong></h3>
+                <img alt="small_square" src="pics/square_large.png" /> 
+                <h4><span id="calcaggsquareyds_result" class="pageresults"></span></h4>
+                <h4><span id="calcaggsquaretons_result" class="pageresults"></span></h4>
+                <form id="aggsquareCalc" name="frmCalc" action="#" method="post">
+                <table>
+                  <tr>
+                    <td>Length:</td>
+                    <td><input id="squareaggHeight" name="squareaggHeight" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                    <td><select id="squareaggHeightVal" name="squareaggHeightVal" data-mini="true">
+                        <option value="Inches">Inches</option>
+                        <option selected="selected" value="Feet">Feet</option>
+                        <option value="Yards">Yards</option>
+                        <option value="Miles">Miles</option>
+                      </select></td>
+                  </tr>
+                  <tr>
+                    <td>Width:</td>
+                    <td><input id="squareaggWidth" name="squareaggWidth" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                    <td><select id="squareaggWidthVal" name="squareaggWidthVal" data-mini="true">
+                        <option value="Inches">Inches</option>
+                        <option selected="selected"  value="Feet">Feet</option>
+                        <option value="Yards">Yards</option>
+                        <option value="Miles">Miles</option>
+                      </select></td>
+                  </tr>
+                  <tr>
+                    <td>Depth:</td>
+                    <td><input id="squareaggDepth" name="squareaggDepth" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                    <td><select id="squareaggDepthVal" name="squareaggDepthVal" data-mini="true">
+                        <option selected="selected" value="Inches">Inches</option>
+                        <option value="Feet">Feet</option>
+                        <option value="Yards">Yards</option>
+                        <option value="Miles">Miles</option>
+                      </select></td>
+                  </tr></table>
+                    <table>
+                    <tr>
+                    <td>Choose Aggregate</td>
+                    <td><select id="squareaggtype" name="squareaggtype" >
+                        <option selected="selected" value='1.3' data-mini="true" >Sand</option>
+                        <option value='1.2'>3/8" Stone</option>
+                        <option value='1.2'>3/4" Stone</option>
+                        <option value='1.2'>1 1/2" Stone</option>
+                      </select></td>
+                  </tr> 
+                </table>
+            <a id="calculate_squareagg" onclick="calculate_squareagg();" data-role="button" data-inline="true" title="Click to calculate Volume" href="#">Calculate Volume</a>
+        </form>
+     </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div><!-- /End ready mix square form page -->
+
+<!-- Start of agg slope form: #aggslopeform -->
+<div data-role="page" id="aggslopeform" data-theme="c" >
+
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Enter Dimensions</h1>
+	</div><!-- /header -->
+        <div align="center">
+            <h3><strong>Slope</strong></h3>
+            <img alt="large_slope" src="pics/slope_large.png"/> 
+            <h4><span id="calcaggslopeyds_result" class="pageresults"></span></h4>
+            <h4><span id="calcaggslopetons_result" class="pageresults"></span></h4>        
+            <form id="aggslopeCalc" name="frmCalc" action="#" method="post">
+              <table>
+                <tr>
+                  <td>Length:</td>
+                  <td><input id="slopeaggHeight" name="slopeaggHeight" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="slopeaggHeightVal" name="slopeaggHeightVal" data-mini="true">
+                      <option value="Inches">Inches</option>
+                      <option selected="selected"  value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Width:</td>
+                  <td><input id="slopeaggWidth" name="slopeaggWidth" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="slopeaggWidthVal" name="slopeaggWidthVal" data-mini="true">
+                      <option value="Inches">Inches</option>
+                      <option selected="selected" value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Depth A:</td>
+                  <td><input id="slopeaggDepth" name="slopeaggDepth" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="slopeaggDepthVal" name="slopeaggDepthVal" data-mini="true">
+                      <option selected="selected" value="Inches">Inches</option>
+                      <option value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Depth B:</td>
+                  <td><input id="slopeaggDense" name="slopeaggDense" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select name="slopeaggDenseVal" id="slopeaggDenseVal" data-mini="true">
+                      <option selected="selected" value="Inches">Inches</option>
+                      <option value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+              </table>
+                <table>
+                    <tr>
+                    <td>Choose Aggregate</td>
+                    <td><select id="slopeaggtype" name="slopeaggtype" >
+                        <option selected="selected" value='1.3' data-mini="true" >Sand</option>
+                        <option value='1.2'>3/8" Stone</option>
+                        <option value='1.2'>3/4" Stone</option>
+                        <option value='1.2'>1 1/2" Stone</option>
+                      </select></td>
+                  </tr> 
+                </table>
+              <a id="calculate_slopeagg" onclick="calculate_slopeagg();" data-role="button" data-inline="true" title="Click to calculate Volume" href="#">Calculate Volume</a>
+            </form>
+       </div>   
+     <div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div><!-- /End ready mix slope form page -->       
+
+<!-- Start of agg circle form: #aggcircleform -->
+<div data-role="page" id="aggcircleform" data-theme="c" >
+
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Enter Dimensions</h1>
+	</div><!-- /header -->
+        <div align="center">
+            <h3><strong>Circle</strong></h3>
+            <img alt="large_circle" src="pics/circle_large.png" /> 
+            <h4><span id="calcaggcircleyds_result" class="pageresults"></span></h4>
+            <h4><span id="calcaggcircletons_result" class="pageresults"></span></h4>
+            <form id="circleaggCalc" name="frmCalc" action="#" method="post">
+              <table>
+                <tr>
+                  <td>Radius:</td>
+                  <td><input id="circleaggHeight" name="circleaggHeight" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="circleaggHeightVal" name="circleaggHeightVal" data-mini="true">
+                      <option value="Inches">Inches</option>
+                      <option selected="selected" value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Depth:</td>
+                  <td><input id="circleaggWidth" name="circleaggWidth" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="circleaggWidthVal" name="circleaggWidthVal" data-mini="true">
+                      <option selected="selected" value="Inches">Inches</option>
+                      <option value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+              </table>
+                <table>
+                    <tr>
+                    <td>Choose Aggregate</td>
+                    <td><select id="circleaggtype" name="circleaggtype" >
+                        <option selected="selected" value='1.3' data-mini="true" >Sand</option>
+                        <option value='1.2'>3/8" Stone</option>
+                        <option value='1.2'>3/4" Stone</option>
+                        <option value='1.2'>1 1/2" Stone</option>
+                      </select></td>
+                  </tr> 
+                </table>
+              <a id="calculate_circleagg" onclick="calculate_circleagg();" data-role="button" data-inline="true" title="Click to calculate Volume" href="#">Calculate Volume</a>
+            </form>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div><!--End of agg circle form-->
+
+<!-- Start of agg tube form: #aggform -->
+<div data-role="page" id="aggtubeform" data-theme="c" >
+
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Enter Dimensions</h1>
+	</div><!-- /header -->
+        <div align="center">
+        <h3><strong>Tube</strong></h3>
+        <img alt="large_tube" src="pics/tube_large.png" /> 
+        <h4><span id="calcaggtubeyds_result" class="pageresults"></span></h4>
+        <h4><span id="calcaggtubetons_result" class="pageresults"></span></h4>      
+        <form id="tubeaggCalc" name="frmCalc" action="#" method="post">
+              <table>
+                <tr>
+                  <td>Outside radius:</td>
+                  <td><input id="tubeaggOutside" name="tubeaggOutside" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="tubeaggOutsideVal" name="tubeaggOutsideVal" data-mini="true">
+                      <option value="Inches">Inches</option>
+                      <option selected="selected" value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Inside radius:</td>
+                  <td><input id="tubeaggInside" name="tubeaggInside" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="tubeaggInsideVal" name="tubeaggInsideVal" data-mini="true">
+                      <option value="Inches">Inches</option>
+                      <option selected="selected" value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Depth:</td>
+                  <td><input id="tubeaggDepth" name="tubeaggDepth" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="tubeaggDepthVal" name="tubeaggDepthVal" data-mini="true">
+                      <option selected="selected" value="Inches">Inches</option>
+                      <option value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+              </table>
+                  <table>
+                    <tr>
+                    <td>Choose Aggregate</td>
+                    <td><select id="tubeaggtype" name="tubeaggtype" >
+                        <option selected="selected" value='1.3' data-mini="true" >Sand</option>
+                        <option value='1.2'>3/8" Stone</option>
+                        <option value='1.2'>3/4" Stone</option>
+                        <option value='1.2'>1 1/2" Stone</option>
+                      </select></td>
+                  </tr> 
+                </table>
+              <a id="calculate_tubeagg" onclick="calculate_tubeagg();" data-role="button" data-inline="true" title="Click to calculate Volume" href="#">Calculate Volume</a>
+            </form>
+        </div>
+      <div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div><!--End of agg tube form-->       
+
+<!-- Start of agg triangle form: #aggtriangleform -->
+<div data-role="page" id="aggtriangleform" data-theme="c" >
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Enter Dimensions</h1>
+	</div><!-- /header -->
+        <div align="center">
+            <h3><strong>90&deg; Triangle</strong></h3>
+            <img alt="large_triangle" src="pics/triangle_large.png" /> 
+            <h4><span id="calcaggtriangleyds_result" class="pageresults"></span></h4>
+            <h4><span id="calcaggtriangletons_result" class="pageresults"></span></h4>
+            <form id="triangleaggCalc" name="frmCalc" action="#" method="post">
+              <table>
+                <tr>
+                  <td>Length:</td>
+                  <td><input id="triangleaggHeight" name="triangleaggHeight" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="triangleaggHeightVal" name="triangleaggHeightVal" data-mini="true">
+                      <option value="Inches">Inches</option>
+                      <option selected="selected" value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Width:</td>
+                  <td><input id="triangleaggWidth" name="triangleaggWidth" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="triangleaggWidthVal" name="triangleaggWidthVal" data-mini="true">
+                      <option value="Inches">Inches</option>
+                      <option selected="selected" value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td>Depth:</td>
+                  <td><input id="triangleaggDepth" name="triangleaggDepth" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/></td>
+                  <td><select id="triangleaggDepthVal" name="triangleaggDepthVal" data-mini="true">
+                      <option selected="selected" value="Inches">Inches</option>
+                      <option value="Feet">Feet</option>
+                      <option value="Yards">Yards</option>
+                      <option value="Miles">Miles</option>
+                    </select></td>
+                </tr>
+              </table>
+                <table>
+                    <tr>
+                    <td>Choose Aggregate</td>
+                    <td><select id="triangleaggtype" name="triangleaggtype" >
+                        <option selected="selected" value='1.3' data-mini="true" >Sand</option>
+                        <option value='1.2'>3/8" Stone</option>
+                        <option value='1.2'>3/4" Stone</option>
+                        <option value='1.2'>1 1/2" Stone</option>
+                      </select></td>
+                  </tr> 
+                </table>
+              <a id="calculate_triangleagg" onclick="calculate_triangleagg();" data-role="button" data-inline="true" title="Click to calculate Volume" href="#">Calculate Volume</a>
+            </form>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div><!--End of agg triangle form-->
+
+<!--Begin rate of evaporation form-->
+<div data-role="page" id="evap" data-theme="c" >
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Enter Conditions</h1>
+	</div><!-- /header -->
+        <div align="center">
+                <p style='line-height: 100%; margin:0; padding:0'><strong>Note</strong></p> 
+                <p style='line-height: 100%; margin:0; padding:0'>**Wind speed should be measured at 20" above the concrete and averaged.</p>
+                <p style='line-height: 100%; margin:0; padding:0'>**Air temp. and relative humidity should be measured in the shade upwind and 4' - 6' above the concrete.</p>
+                <img alt="small_square" src="pics/slab.png"/> 
+                <form id="evapCalc" name="frmCalc" action="#" method="post">
+                  <table>
+                    <tr>
+                      <td>Avg. Wind Speed:</td>
+                      <td><input id="windSpeed" name="windSpeed" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/>
+                          <a>MPH [Range 0-40 MPH]</a></td>
+                    </tr>
+                    <tr>
+                      <td>Relative Humidity:</td>
+                      <td><input id="airHumd" name="airHumd" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/>
+                      <a>% [Range 0-99%]</a></td>
+                    </tr>
+                    <tr>
+                      <td>Air Temp.:</td>
+                      <td><input id="airTemp" name="airTemp" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/>
+                      <a>&deg;F [Range 30-125&deg;F]</a></td>
+                    </tr> 
+                    <tr>
+                      <td>Concrete Temp.:</td>
+                      <td><input id="concTemp" name="concTemp" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/>
+                      <a>&deg;F [Range 30-99&deg;F]</a></td>
+                    </tr>
+                    <tr>
+                      <td>Area of Pour</td>
+                      <td><input id="slabArea" name="slabArea" type="number" step="0.1" onkeyup="number_verify(this.value, this.id);"/>
+                      <a>Square Feet</a></td>
+                      </tr>  
+                   </table>
+                  <a id="calculate_evap" onclick="calculate_evap();calculate_evapret();" data-role="button" data-inline="true" title="Click to calculate the rate of evaporation" href="#evapresults">Calculate Evaporation Rate</a>
+                </form>
+             </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div><!--End of agg triangle form-->
+<!--End rate of evaporation form-->
+
+<!--Begin evap results page-->
+<div data-role="page" id="evapresults" data-theme="c" >
+	<div data-role="header" data-theme="b" data-add-back-btn="true">
+		<h1>Results</h1>
+	</div><!-- /header -->
+        <div align="center">
+            <h3>Your rate of evaporation is: </h3>
+            <img id="evappic"></img>
+            <h2 id="evapcalculator_result"></h2>
+            <h4>An evaporation retarder can reduce the risk of plastic shrinkage cracks. Your pour would require:</h4>
+            <h3 id="evapretcalculator_result"></h3>
+            <h4>of Concentrated Evaporation Retarder</h4>
+        </div>
+    <div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+  </div>
+<!--End of evap results page-->
+
+<!--Start of disclaimer page: #disclaimer-->
+<div data-role="page" id="disclaimer" data-theme="d">
+	<div data-role="header" class="custom-header">
+            <div class="logo_container">
+            <img src="pics/logo_image.png" class="logo_image" />
+            </div>
+        </div><!-- /header -->
+	<div data-role="content">
+            <h3>Limitation of liability</h3>
+            <p>This Calculator should be used as a guide only, all quantities are calculated without waste, except those where the % of waste is noted. 
+            Please speak to one of our sales representatives if you have any questions. We accept no responsibility for incorrect information provided by the user or incorrect use of the calculator. 
+            For any other questions or feedback please click the Contact button below for our phone number or email address.</p>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div>
+<!--End of disclaimer page-->
+
+<!--Start of call page: #call-->
+<div data-role="page" id="call" data-theme="d">
+	<div data-role="header" class="custom-header">
+            <div class="logo_container">
+            <img src="pics/logo_image.png" class="logo_image" />
+            </div>
+        </div><!-- /header -->
+	<div data-role="content">
+            <h4>Would you like to offer a custom branded version of this app to your customers? If so, check out our website or send me an email to learn more.</h4>
+            <h3><a href="http://www.myconcreteapp.com/">MyConcreteApp.com</a></h3>
+<!--            <h3><a href="tel:14234028796">Ph: (423)402-8796</a></h3>-->
+            <h4><a href="mailto:brett@myconcreteapp.com">Email: contact@myconcreteapp.com</a></h4>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+             <div data-role="navbar">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#disclaimer" data-icon="info">Disclaimer</a></li>
+			<li><a href="#call" data-icon="grid">Contact</a></li>
+		</ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+</div>
+<!--End of call page-->
+
+</body>
+
+</html>

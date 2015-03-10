@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.myconcreteapp.demo"
+        versionCode = "11" 
+        version     = "1.0.1" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>MyConcreteApp</name>
+
+    <description>
+        Demo of MyConcreteApp 
+    </description>
+
+    <author href="https://myconcreteapp.com" email="support@myconcreteapp.com">
+        Me 
+    </author>
+    
+    <!-- Define app icon for each platform. -->
+<!--    <icon src="icon.png" />-->
+    <icon src="pics/icon_android-36.png"   gap:platform="android"    gap:qualifier="ldpi" />
+    <icon src="pics/icon_android-48.png"   gap:platform="android"    gap:qualifier="mdpi" />
+    <icon src="pics/icon_android-72.png"   gap:platform="android"    gap:qualifier="hdpi" />
+    <icon src="pics/icon_android-96.png"  gap:platform="android"    gap:qualifier="xhdpi" />
+    <icon src="pics/icon-57.png"            gap:platform="ios"        width="57" height="57" />
+    <icon src="pics/icon-72.png"            gap:platform="ios"        width="72" height="72" />
+    <icon src="pics/icon-114.png"         gap:platform="ios"        width="114" height="114" />
+    <icon src="pics/icon-144.png"         gap:platform="ios"        width="144" height="144" />
+    
+</widget>
